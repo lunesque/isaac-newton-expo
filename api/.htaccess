@@ -1,0 +1,15 @@
+RewriteEngine On
+RewriteBase /api/
+
+RewriteRule ^reservations/?$ reservations.php [L]
+RewriteRule ^reservations/([0-9]+)/?$ reservations.php?id=$1 [L]
+
+RewriteRule ^accounts/?$ accounts.php [L]
+RewriteRule ^accounts/([0-9]+)/?$ accounts.php?id=$1 [L]
+RewriteRule ^accounts/([0-9]+)/reservations$ reservations.php?account_id=$1 [L]
+
+RewriteRule ^tickets/?$ tickets.php [L]
+RewriteRule ^tickets/([0-9]+)/?$ tickets.php?id=$1 [L]
+
+RewriteRule ^auth/?$ auth.php [L]
+
