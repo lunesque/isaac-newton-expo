@@ -4,7 +4,11 @@
     }
     spl_autoload_register('loadClass');
 
-    $db = new PDO('mysql:host=mysql-isaac-newton.alwaysdata.net;dbname=isaac-newton_expo', '404636', 'MMI@champs');
+    $DB_NAME = 'mydatabase';
+    $DB_USER = 'myuser';
+    $DB_PASS = 'mypassword';
+
+    $db = new PDO('mysql:host=mysql-isaac-newton.alwaysdata.net;dbname='.$DB_NAME, $DB_USER, $DB_PASS);
 
     const SECRET = 'mmichamps';
 
