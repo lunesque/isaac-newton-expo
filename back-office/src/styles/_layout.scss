@@ -1,0 +1,59 @@
+* {
+    font-family: $sans-serif-family;
+}
+
+body {
+    @include center-flex;
+
+    min-height: 100vh;
+}
+
+header {
+    @include center-flex;
+
+    flex-direction: column;
+    height: $header-height;
+}
+
+h1 {
+    margin: 12px 0;
+
+    @include font-size(40);
+}
+
+h2 {
+    @include font-size(30);
+
+    margin-bottom: 16px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.reservations, .accounts, .tickets {
+    @include center-flex(x);
+
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+    border: solid 1px;
+}
+
+.reservations {
+    grid-column: 1 / span 2;
+}
+
+.button {
+    background-color: black;
+    border: none;
+    padding: 8px 12px;
+    color: white;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+

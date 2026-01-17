@@ -1,0 +1,37 @@
+.table-container {
+    display: inline-block;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {    
+    padding: 8px;
+    border: solid 1px gray;
+    vertical-align: middle;
+    text-align: center;
+
+    @include font-size(16);
+}
+
+th {
+    background-color: $main-color;
+    vertical-align: middle;
+    position: sticky;
+}
+
+thead {
+    border: solid 1px gray;
+    position: sticky;
+    top: 0;
+}
+
+tbody tr:nth-child(even) {
+    background-color: $background-color;
+}
+
+
+

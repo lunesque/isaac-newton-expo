@@ -1,0 +1,51 @@
+@mixin font-size($size, $unit: rem) {
+    font-size: $size / 16 + $unit;
+}
+
+@mixin center-flex($direction: null) {
+    display: flex;
+
+    @if $direction == 'x' {
+        justify-content: center;
+    } @else if $direction == 'row' {
+        align-items: center;
+    } @else {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+$tablet: 768;
+$large: 1024;
+$desktop: 1280;
+
+@mixin tablet {
+  @media only screen and (min-width: $tablet * 1px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media only screen and (min-width: $large * 1px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: $desktop * 1px) {
+    @content;
+  }
+}
+
+/* ===== Usage ===== */
+// h1 {
+//   font-size: 10px;
+
+//   @include tablet {
+//     font-size: 12px;
+//   }
+
+//   @include desktop {
+//     font-size: 20px;
+//   }
+// }

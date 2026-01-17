@@ -1,0 +1,23 @@
+.login {
+    border: solid 1px;
+    padding: 20px;
+}
+
+.login-form {
+    @include center-flex;
+
+    flex-direction: column;
+
+    input {
+        display: table-cell;
+    }
+
+    label {
+        display: table-cell;
+    }
+
+    fieldset {
+        margin-bottom: 12px;
+    }
+}
+
