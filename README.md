@@ -19,24 +19,23 @@ Installation
 - importer la base de données 'expo_newton.sql'
 - entrez hote, nom de la base, identifiant et mot de passe dans config.php
 
-Utilisation
-/api/auth       - GET - verify admin token
-/api/auth       - POST - login (any account), create a token (only if account id = 1 / admin)
-/api/auth/{id}  - DELETE - destroy session (delete account id and token cookies)
-
-/api/accounts       - GET - get all accounts
-/api/accounts/{id}  - GET - get one account from id
-/api/accounts       - POST - create a new account
-/api/accounts/{id}  - PUT - modify an account
-/api/accounts/{id}  - DELETE - delete an account
-
-/api/reservations       - GET - get all reservations
-/api/reservations/{id}  - GET - get one reservation from id
-/api/reservations       - POST - create a new reservations
-/api/reservations/{id}  - PUT - modify a reservations
-/api/reservations/{id}  - DELETE - delete a reservations
-
-/api/tickets    - GET - get all ticket types
+## Utilisation
+| Endpoint | Method | Description |
+|---|---|---|
+| `/api/auth` | `GET` | Verify admin token |
+| `/api/auth` | `POST` | Login (any account), create a token (admin only — account id = 1) |
+| `/api/auth/{id}` | `DELETE` | Destroy session (delete account id and token cookies) |
+| `/api/accounts` | `GET` | Get all accounts |
+| `/api/accounts/{id}` | `GET` | Get one account by id |
+| `/api/accounts` | `POST` | Create a new account |
+| `/api/accounts/{id}` | `PUT` | Modify an account |
+| `/api/accounts/{id}` | `DELETE` | Delete an account |
+| `/api/reservations` | `GET` | Get all reservations |
+| `/api/reservations/{id}` | `GET` | Get one reservation by id |
+| `/api/reservations` | `POST` | Create a new reservation |
+| `/api/reservations/{id}` | `PUT` | Modify a reservation |
+| `/api/reservations/{id}` | `DELETE` | Delete a reservation |
+| `/api/tickets` | `GET` | Get all ticket types |
 
 Troubleshooting :
 - Erreurs de CORS : ajouter des domaines dans $allowed_domains dans config.php pour pouvoir envoyer des requêtes vers l'API ou héberger tous les parties du site sur le même domaine 
